@@ -12,7 +12,7 @@ This is the official implementation of the paper [Learning to Encode Text as Hum
 In this implementation, I use GAN training method proposed by [ScratchGAN](https://arxiv.org/pdf/1905.09922.pdf) for adversarial training. The performance is more robust and slightly better than original paper.  
 
 ## Running code:  
-### Download English Gigaword:  
+#### Download English Gigaword:  
 Download data from [Sent-Summary](https://github.com/harvardnlp/sent-summary). Then, move downloaded "train.article.txt" and "train.title.txt" to "giga_word" directory in this repository.  
 
 #### Make pretraining data:  
