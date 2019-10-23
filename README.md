@@ -26,12 +26,14 @@ Download data from [Sent-Summary](https://github.com/harvardnlp/sent-summary). T
 > python3 make_pretrain.py  
 
 #### Pretraining generator:  
-> python3 main.py -pretrain -model_dir [model_path] -num_steps 20000 (optional: -pretrain_input [pretrain_input_path] -pretrain_target [pretrain_target_path])  
+> python3 main.py -pretrain -model_dir [model_path] -num_steps 20000  
+
+Pretraining generator is required.
 
 #### Unparalleled Summarization Training:  
-> python3 main.py -train -model_dir [model_path]-num_steps 7000 (optional: -article [article_path] -summary [summary_path])  
+> python3 main.py -train -model_dir [model_path]-num_steps 7000  
 
-The default setting can reproduce the results in the paper.
+The model_path should be same as the pretrained model path. The default setting can reproduce the results in the paper.  
 
 #### Testing:  
 > python3 main.py -test -model_dir [model_path] -test_input [input_path] -result_path [result_path]  
