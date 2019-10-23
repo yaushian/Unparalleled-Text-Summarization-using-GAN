@@ -1,6 +1,13 @@
 # Unparalleled Text summarization using GAN  
-This is the official implementation of the paper [Learning to Encode Text as Human-Readable Summaries using Generative Adversarial Networks](https://arxiv.org/abs/1810.02851).  
-
+This is the official implementation of the paper [Learning to Encode Text as Human-Readable Summaries using Generative Adversarial Networks](https://arxiv.org/abs/1810.02851). If you use this code or our results in your research, we'd appreciate you cite our paper as following:  
+```
+@article{Wang2018Summary_GAN,
+  title={Learning to Encode Text as Human-Readable Summaries using Generative Adversarial Networks},
+  author={Yau-Shian Wang and Hung-Yi Lee},
+  journal={arXiv preprint arXiv:1810.02851},
+  year={2018}
+}
+```
 
 ## Dependencies  
 
@@ -8,8 +15,8 @@ This is the official implementation of the paper [Learning to Encode Text as Hum
 * tensorflow >= 1.0  
 
 
-## Difference between original paper  
-In this implementation, I use GAN training method proposed by [ScratchGAN](https://arxiv.org/pdf/1905.09922.pdf) for adversarial training. The performance is more robust and slightly better than original paper.  
+## Difference between the original paper  
+In this implementation, I use the GAN training method proposed by [ScratchGAN](https://arxiv.org/pdf/1905.09922.pdf) for adversarial training. The performance is more robust and slightly better than original paper.  
 
 ## Running code:  
 #### Download English Gigaword:  
@@ -19,10 +26,10 @@ Download data from [Sent-Summary](https://github.com/harvardnlp/sent-summary). T
 > python3 make_pretrain.py  
 
 #### Pretraining generator:  
-> python3 main.py -pretrain -model_dir [model_path] -num_steps 20000  
+> python3 main.py -pretrain -model_dir [model_path] -num_steps 20000 (optional: -pretrain_input [pretrain_input_path] -pretrain_target [pretrain_target_path])  
 
 #### Unparalleled Summarization Training:  
-> python3 main.py -train -model_dir [model_path] -article [article_path] -summary [summary_path] -num_steps 7000  
+> python3 main.py -train -model_dir [model_path]-num_steps 7000 (optional: -article [article_path] -summary [summary_path])  
 
 The default setting can reproduce the results in the paper.
 
