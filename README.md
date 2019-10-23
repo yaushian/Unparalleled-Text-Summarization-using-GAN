@@ -15,16 +15,16 @@ In this implementation, I use GAN training method proposed by [ScratchGAN](https
 ### Download English Gigaword:  
 Download data from [Sent-Summary](https://github.com/harvardnlp/sent-summary). Then, move downloaded "train.article.txt" and "train.title.txt" to "giga_word" directory in this repository.  
 
-### Make pretraining data:  
+#### Make pretraining data:  
 > python3 make_pretrain.py  
 
-### Pretraining generator:  
-> python3 main.py -pretrain -model_dir [model_path] -pretrain_input [input_path] -pretrain_target -num_steps 20000  
+#### Pretraining generator:  
+> python3 main.py -pretrain -model_dir [model_path] -num_steps 20000  
 
-### Unparalleled Summarization Training:  
+#### Unparalleled Summarization Training:  
 > python3 main.py -train -model_dir [model_path] -article [article_path] -summary [summary_path] -num_steps 7000  
 
 The default setting can reproduce the results in the paper.
 
-### Testing:  
+#### Testing:  
 > python3 main.py -test -model_dir [model_path] -test_input [input_path] -result_path [result_path]  
