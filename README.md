@@ -12,7 +12,7 @@ This is the official implementation of the paper [Learning to Encode Text as Hum
 ## Dependencies  
 
 * python3  
-* tensorflow >= 1.0  
+* 1.0 <= tensorflow < 2.0  
 
 
 ## Difference between the original paper  
